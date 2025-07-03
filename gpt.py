@@ -13,15 +13,14 @@ def ask_gpt(prompt):
     try:
         completion = client.chat.completions.create(
             model="gryphe/mythomax-l2-13b",
-            messages=[
-                {"role": "user", "content": prompt}
-            ],
+            messages=[{"role": "user", "content": prompt}],
             extra_headers={
-                "HTTP-Referer": "https://your-site.com",  # можна вказати будь-що
-                "X-Title": "JarvisUncensored"
-            }
+                "HTTP-Referer": "https://your-site.com",
+                "X-Title": "JarvisNSFW"
+            },
+            extra_body={}
         )
         return completion.choices[0].message.content
     except Exception as e:
         print("❌ GPT Error:", e)
-        return "⚠️ Вибач, модель тимчасово недоступна або виникла помилка."
+        return "⚠️ Виникла помилка при зверненні до моделі."
