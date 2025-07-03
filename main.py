@@ -8,7 +8,7 @@ load_dotenv()
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("💬 Jarvis готовий. Напиши мені щось...")
+    await update.message.reply_text("💬 Jarvis (Mistral) готовий. Напиши мені щось...")
 
 async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     prompt = update.message.text
