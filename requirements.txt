@@ -1,6 +1,5 @@
 python-telegram-bot==20.3
 openai
-edge-tts
 faster-whisper
 python-dotenv
 requests
